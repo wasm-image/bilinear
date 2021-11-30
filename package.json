@@ -2,13 +2,13 @@
   "author": "Leonel Vieyra <me@leonelv.com>",
   "name": "@wasm-image/bilinear",
   "description": "image resampler based on the bilinear interpolation algorithm",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "scripts": {
+    "start": "rimraf dist pkg && webpack-dev-server --open -d",
+    "build": "rimraf pkg && wasm-pack build --scope wasm-image --target web --release --out-name browser --no-typescript && wasm-pack build --scope wasm-image --target bundler --release --out-name index && node ./scripts/create-package",
+    "test": "cargo test && wasm-pack test --headless --chrome",
     "prepare": "husky install",
     "website:build": "rimraf dist pkg && webpack --release",
-    "build": "rimraf pkg && wasm-pack build --scope wasm-image --target web --release --out-name browser --no-typescript && wasm-pack build --scope wasm-image --target bundler --release --out-name index && node ./scripts/create-package",
-    "start": "rimraf dist pkg && webpack-dev-server --open -d",
-    "test": "cargo test && wasm-pack test --headless --chrome",
     "semantic-release": "semantic-release"
   },
   "devDependencies": {
