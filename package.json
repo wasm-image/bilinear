@@ -2,7 +2,7 @@
   "author": "Leonel Vieyra <me@leonelv.com>",
   "name": "@wasm-image/bilinear",
   "description": "image resampler based on the bilinear interpolation algorithm",
-  "version": "1.0.0-development",
+  "version": "1.0.0",
   "scripts": {
     "prepare": "husky install",
     "website:build": "rimraf dist pkg && webpack --release",
