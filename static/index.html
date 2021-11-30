@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>bilinear-wasm</title>
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body>
+    <div id="main">
+      <div id="image-selector">
+        <input type="text" id="input-url" />
+        <button>Select image</button>
+      </div>
+      <div id="grid">
+        <p>Original Image</p>
+        <p>Resized Image</p>
+        <div class="flex-container">
+          <img id="src-img" />
+        </div>
+        <div class="flex-container">
+          <canvas></canvas>
+        </div>
+        <button>Convert with JS</button>
+        <button>Convert with WASM</button>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/platform/1.3.6/platform.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/benchmark/2.1.4/benchmark.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

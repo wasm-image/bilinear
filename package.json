@@ -1,0 +1,36 @@
+{
+  "author": "Leonel Vieyra <me@leonelv.com>",
+  "name": "@wasm-image/bilinear",
+  "description": "image resampler based on the bilinear interpolation algorithm",
+  "version": "1.0.0",
+  "scripts": {
+    "prepare": "husky install",
+    "build": "rimraf dist pkg && webpack --release",
+    "start": "rimraf dist pkg && webpack-dev-server --open -d",
+    "test": "cargo test && wasm-pack test --headless --chrome"
+  },
+  "repository": {
+    "url": "https://github.com/wasm-image/bilinear",
+    "type": "git"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^15.0.0",
+    "@wasm-tool/wasm-pack-plugin": "^1.1.0",
+    "copy-webpack-plugin": "^5.0.3",
+    "rimraf": "^3.0.0",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.3",
+    "webpack-dev-server": "^3.7.1",
+    "@commitlint/config-conventional": "^15.0.0",
+    "husky": "^7.0.4"
+  },
+  "keywords": [
+    "rust",
+    "wasm",
+    "bilinear",
+    "imagedata",
+    "image",
+    "data",
+    "webassembly"
+  ]
+}
